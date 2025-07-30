@@ -14,6 +14,9 @@ else
     printf "[%s] [Info] Continuing without the '--mangoapp' flag.\n" $0
 fi
 
+STEAM_GAMESCOPE_VRR_SUPPORTED=1
+STEAM_MULTIPLE_XWAYLANDS=1
+
 gamescope \
     $MANGOAPP_FLAG \
-    -e -- steam -steamdeck -steamos3
+    --steam --xwayland-count 2 -- steam -steamdeck -steamos3
